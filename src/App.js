@@ -1,11 +1,16 @@
-import React from 'react';
-import './App.sass';
+import React from 'react'
+import './App.sass'
 
-import TitleNavBar from './components/Nav/TitleNavBar';
+import TitleNavBar from './components/Nav/TitleNavBar'
+import BoarderHeaderNav from './components/Nav/BoarderHeaderNav'
 
 function App() {
   return (
-    <TitleNavBar/>
+    <div>
+       <TitleNavBar/>
+       <BoarderHeaderNav/>
+    </div>
+   
   )
 }
 
