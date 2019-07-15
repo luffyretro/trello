@@ -1,6 +1,8 @@
 import React,{ Component } from 'react'
 import uuid from "uuid";
 
+//import List from "./components/CardList/List";
+
 class ActivityList extends Component{
    
     constructor(props) {
@@ -35,20 +37,29 @@ class ActivityList extends Component{
         this.setState({
           Lists: newList
         });
-        // console.log(lists);
         // add the created list inside the listOrder array
         for (let list in Lists) {
           this.setState({
             ListOrder: [...this.state.ListOrder, list]
           });
         }
-         console.log(Lists);
       };
 
     render(){
+      const { lists, cards, ListOrder} = this.state;
         return(
             <div>
-                <button className="add-list" onClick={this.addList}>+ Add a list</button>
+                 {/*ListOrder.map((listId, index) => {
+                const list = lists[listId];
+                const cardList = list.taskIds.map(id => cards[id]);
+                return (
+                 <h1></h1> 
+                )
+              })*/}
+
+                <div>
+                    <button className="add-list" onClick={this.addList}>+ Add a list</button>
+                </div>
             </div>
         )
     }
